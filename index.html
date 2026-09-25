@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ProjectCraft — Rang-Shop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <span class="wordmark">ProjectCraft</span>
+    <div id="account-area">
+      <button id="link-btn" class="btn btn-ghost">Account verknüpfen</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-inner">
+    <h1 class="hero-title">ProjectCraft</h1>
+    <p class="hero-sub">Ränge kaufen mit dem Geld, das du bereits im Spiel hast. Kein Echtgeld, keine Wartezeit — der Rang ist sofort da.</p>
+    <button class="ip-chip" id="ip-chip" type="button">
+      <span class="ip-label">Server-IP</span>
+      <span class="ip-value">projectcraft.play.hosting</span>
+      <span class="ip-copy-hint">Klicken zum Kopieren</span>
+    </button>
+  </div>
+</section>
+
+<section class="how">
+  <div class="wrap">
+    <ol class="how-steps">
+      <li>
+        <span class="how-index">Schritt 1</span>
+        <h3>Code holen</h3>
+        <p>Gib im Spiel <code>/linkweb</code> ein. Du bekommst einen 6-stelligen Code, 5 Minuten gültig.</p>
+      </li>
+      <li>
+        <span class="how-index">Schritt 2</span>
+        <h3>Account verknüpfen</h3>
+        <p>Trag den Code oben bei „Account verknüpfen" ein. Danach siehst du dein echtes Ingame-Guthaben.</p>
+      </li>
+      <li>
+        <span class="how-index">Schritt 3</span>
+        <h3>Rang kaufen</h3>
+        <p>Das Guthaben wird direkt über Vault/EssentialsX abgezogen, LuckPerms setzt den Rang sofort.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="shop wrap">
+  <div class="shop-header">
+    <h2>Ränge</h2>
+    <div id="balance-line" class="balance-line hidden">
+      Eingeloggt als <strong id="balance-player"></strong> — Guthaben: <strong id="balance-amount"></strong>
+    </div>
+  </div>
+  <div id="rank-status" class="status-msg">Lade Ränge …</div>
+  <div id="rank-grid" class="rank-grid"></div>
+</section>
+
+<footer class="site-footer wrap">
+  <p>ProjectCraft &middot; projectcraft.play.hosting</p>
+</footer>
+
+<div id="link-modal" class="modal hidden">
+  <div class="modal-card">
+    <h3>Account verknüpfen</h3>
+    <p>Gib im Spiel <code>/linkweb</code> ein und trag den Code hier ein.</p>
+    <input id="link-code-input" type="text" inputmode="numeric" maxlength="6" placeholder="123456" autocomplete="off">
+    <p id="link-error" class="error-msg hidden"></p>
+    <div class="modal-actions">
+      <button id="link-cancel" class="btn btn-ghost">Abbrechen</button>
+      <button id="link-submit" class="btn btn-primary">Verknüpfen</button>
+    </div>
+  </div>
+</div>
+
+<script src="config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
